@@ -10,30 +10,42 @@
             place-items: center;
             height: 100vh;
         }
-        .spisok {
-            display: inline;
-            margin-right: 5px;
-            padding: 3px;
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+
+        .category-item {
+            padding: 15px;
+            text-align: center;
+            font-weight: bold;
+        }
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
         }
     </style>
 </head>
 <body>
     <header>
         <div class="center">
-        <img src="assets/icons/logo.png" alt="logotip">
+        <img src="assets/icons/logo.png" alt="logotip" width="100" height="100" border: 1px solid #000>
         </div>
-        <ul class="spisok">
-            <li>Plant pots</li>
-            <li>Ceramics</li>
-            <li>Tables</li>
-            <li>Chairs</li>
-            <li>Crockery</li>
-            <li>Tableware</li>
-            <li>Cutlery</li>
+        <ul class="categories-grid">
+            <li class="category-item">Plant pots</li>
+            <li class="category-item">Ceramics</li>
+            <li class="category-item">Tables</li>
+            <li class="category-item">Chairs</li>
+            <li class="category-item">Crockery</li>
+            <li class="category-item">Tableware</li>
+            <li class="category-item">Cutlery</li>
         </ul>
     </header>
     <main>
-         <p>
+         <p class="products-grid">
         <img src="assets/img/Photo (1).png" alt="Фотография 1" >
         <img src="assets/img/Photo (2).png" alt="Фотография 2" >
         <img src="assets/img/Photo (3).png" alt="Фотография 3" >
