@@ -4,176 +4,247 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>МЕГА сайт</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-    <header>
-        <div class="container">
-            <div class="logo"><img src="./assets/icons/logo.png" alt="logotip"></div>
-            <nav>
-
-                <a href="#">Главная</a>
-                <a href="#">Продукция</a>
-                <a href="#">О нас</a>
-                <a href="#">Контакты</a>
-
+<body class="page">
+    <header class="header">
+        <div class="container header__container">
+            <div class="logo header__logo">
+                <img src="./assets/icons/logo.png" alt="Логотип МЕГА сайт" class="logo__image">
+            </div>
+            
+            <input type="checkbox" id="menu-toggle" class="header__menu-toggle">
+            <label for="menu-toggle" class="header__menu-button">
+                <span class="header__menu-icon"></span>
+            </label>
+            
+            <nav class="navigation header__navigation">
+                <ul class="navigation__list">
+                    <li class="navigation__item">
+                        <a href="#hero" class="navigation__link navigation__link--current">Главная</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="#products" class="navigation__link">Продукция</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="#about" class="navigation__link">О нас</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="#contact" class="navigation__link">Контакты</a>
+                    </li>
+                </ul>
             </nav>
         </div>
     </header>
-    <main>
-        <section>
-            <h2>МЕГАбуретка</h2>
-            <p>Таким образом, перспективное планирование требует определения и&nbsp;уточнения анализа существующих паттернов поведения.
-            Ясность нашей позиции очевидна: курс на&nbsp;социально-ориентированный национальный проект выявляет срочную потребность экономической целесообразности принимаемых решений.
-            Противоположная точка зрения подразумевает, что представители современных социальных резервов лишь добавляют фракционных разногласий и&nbsp;в&nbsp;равной степени предоставлены
-            сами себе.</p>
-            <img src="./assets/img/Right Image.png" alt="фото табуретки">
-        </section>
-        <section>
-            <h2>Почему мы?</h2>
-            <div class="icon-with-text">
-                <img src="./assets/icons/Delivery.png" alt="Иконка" class="icon">
-                <span class="text">Наше дело не так однозначно, как может показаться: постоянное информационно-пропагандистское
-                обеспечение нашей деятельности требует определения и уточнения как самодостаточных, так и внешне зависимых концептуальных решений.</span>
-            </div>
-            <div class="icon-with-text">
-                <img src="./assets/icons/Shopping--cart.png" alt="Иконка" class="icon">
-                <span class="text">Но стремящиеся вытеснить традиционное производство, нанотехнологии набирают популярность среди определенных слоев населения,
-                а значит, должны быть своевременно верифицированы.</span>
-            </div>
-            <div class="icon-with-text">
-                <img src="./assets/icons/Sprout.png" alt="Иконка" class="icon">
-                <span class="text">Как уже неоднократно упомянуто, стремящиеся вытеснить традиционное производство, нанотехнологии преданы социально-демократической анафеме.</span>
+    
+    <main class="main">
+        <section id="hero" class="section hero section--primary">
+            <div class="container hero__container">
+                <div class="hero__content">
+                    <h1 class="hero__title">МЕГАбуретка</h1>
+                    <p class="hero__text">Таким образом, перспективное планирование требует определения и&nbsp;уточнения анализа существующих паттернов поведения. Ясность нашей позиции очевидна: курс на&nbsp;социально-ориентированный национальный проект выявляет срочную потребность экономической целесообразности принимаемых решений.</p>
+                    <button class="button hero__button">Заказать сейчас</button>
+                </div>
+                <img src="./assets/img/Right Image.png" alt="Фото МЕГАбуретки" class="hero__image">
             </div>
         </section>
-        <section>
-            <h2>Наши МЕГА популярные продукты</h2>
-            <div class="product">
-                <img src="./assets/img/Photo (1).png" alt="ваза" class="icon">
-                <h3>Ваза из бетона </h3>
-                <p>25000 р.</p>
-            </div>
 
-            <div class="product">
-                <img src="./assets/img/Photo (2).png" alt="лампа" class="icon">
-                <h3>Лампа с голубой стеной</h3>
-                <p>10000 р.</p>
+        <section id="features" class="section features">
+            <div class="container">
+                <h2 class="section__title features__title">Почему мы?</h2>
+                <div class="features__list">
+                    <div class="feature features__item">
+                        <img src="./assets/icons/Delivery.png" alt="Быстрая доставка" class="feature__icon">
+                        <div class="feature__content">
+                            <h3 class="feature__title">Быстрая доставка</h3>
+                            <p class="feature__text">Наше дело не так однозначно, как может показаться: постоянное информационно-пропагандистское обеспечение нашей деятельности требует определения и уточнения как самодостаточных, так и внешне зависимых концептуальных решений.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature features__item">
+                        <img src="./assets/icons/Shopping--cart.png" alt="Удобная покупка" class="feature__icon">
+                        <div class="feature__content">
+                            <h3 class="feature__title">Удобная покупка</h3>
+                            <p class="feature__text">Но стремящиеся вытеснить традиционное производство, нанотехнологии набирают популярность среди определенных слоев населения, а значит, должны быть своевременно верифицированы.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature features__item">
+                        <img src="./assets/icons/Sprout.png" alt="Экологичность" class="feature__icon">
+                        <div class="feature__content">
+                            <h3 class="feature__title">Экологичность</h3>
+                            <p class="feature__text">Как уже неоднократно упомянуто, стремящиеся вытеснить традиционное производство, нанотехнологии преданы социально-демократической анафеме.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-            <div class="product">
-                <img src="./assets/img/Photo (3).png" alt="чб стул" class="icon">
-                <h3>Ч/б стул</h3>
-                <p>10000 р.</p>
-            </div>
-
-            <div class="product">
-                <img src="./assets/img/Photo.png" alt="стул с голубой стеной" class="icon">
-                <h3>Стул с голубой стеной</h3>
-                <p>40000 р.</p>
-            </div>
-
-            <button>Купить все</button>
         </section>
-        <section>
-            <h2>Наш выбор</h2>
-            <div class="product">
-                <img src="./assets/img/Large.png" alt="диван" class="icon">
-                <h3>Диван </h3>
-                <p>25000 р.</p>
+
+        <section id="products" class="section products">
+            <div class="container">
+                <h2 class="section__title products__title">Наши МЕГА популярные продукты</h2>
+                <div class="products__grid">
+                    <div class="product products__item">
+                        <img src="./assets/img/Photo (1).png" alt="Ваза из бетона" class="product__image">
+                        <div class="product__content">
+                            <h3 class="product__title">Ваза из бетона</h3>
+                            <p class="product__price">25 000 ₽</p>
+                            <button class="button button--product">В корзину</button>
+                        </div>
+                    </div>
+                    
+                    <div class="product products__item">
+                        <img src="./assets/img/Photo (2).png" alt="Лампа с голубой стеной" class="product__image">
+                        <div class="product__content">
+                            <h3 class="product__title">Лампа с голубой стеной</h3>
+                            <p class="product__price">10 000 ₽</p>
+                            <button class="button button--product">В корзину</button>
+                        </div>
+                    </div>
+                    
+                    <div class="product products__item">
+                        <img src="./assets/img/Photo (3).png" alt="Ч/б стул" class="product__image">
+                        <div class="product__content">
+                            <h3 class="product__title">Ч/б стул</h3>
+                            <p class="product__price">10 000 ₽</p>
+                            <button class="button button--product">В корзину</button>
+                        </div>
+                    </div>
+                    
+                    <div class="product products__item">
+                        <img src="./assets/img/Photo.png" alt="Стул с голубой стеной" class="product__image">
+                        <div class="product__content">
+                            <h3 class="product__title">Стул с голубой стеной</h3>
+                            <p class="product__price">40 000 ₽</p>
+                            <button class="button button--product">В корзину</button>
+                        </div>
+                    </div>
+                </div>
+                <button class="button button--primary products__button">Купить все</button>
             </div>
-
-            <div class="product">
-                <img src="./assets/img/Photo (2).png" alt="лампа" class="icon">
-                <h3>Лампа с голубой стеной</h3>
-                <p>40000 р.</p>
-            </div>
-
-            <div class="product">
-                <img src="./assets/img/Photo (3).png" alt="чб стул" class="icon">
-                <h3>Ч/б стул</h3>
-                <p>10000 р.</p>
-            </div>
-
-
-
-            <button>Посмотреть больше</button>
         </section>
-        <section>
-            <h2>Присоединяйся к нам</h2>
-            <p>Следует отметить, что граница обучения кадров предоставляет широкие возможности для вывода текущих активов. 
-            Сложно сказать, почему сделанные на&nbsp;базе интернет-аналитики выводы представляют собой не&nbsp;что иное,
-            как квинтэссенцию победы маркетинга над разумом и&nbsp;должны быть объявлены нарушающими общечеловеческие нормы этики и&nbsp;морали.
-            Учитывая ключевые сценарии поведения, убеждённость некоторых оппонентов требует от&nbsp;нас анализа системы обучения кадров, соответствующей насущным потребностям.
 
-            В&nbsp;своём стремлении улучшить пользовательский опыт мы&nbsp;упускаем, что непосредственные участники технического прогресса,
-            вне зависимости от&nbsp;их&nbsp;уровня, должны быть разоблачены. С&nbsp;другой стороны, внедрение современных методик требует от&nbsp;нас
-            анализа новых принципов формирования материально-технической и&nbsp;кадровой базы. И&nbsp;нет сомнений, что сделанные на&nbsp;базе интернет-аналитики 
-            выводы превращены в&nbsp;посмешище, хотя само их&nbsp;существование приносит несомненную пользу обществу.</p>
-
-            <button>Присоединиться</button>
+        <section id="selection" class="section selection">
+            <div class="container">
+                <h2 class="section__title selection__title">Наш выбор</h2>
+                <div class="products__grid">
+                    <div class="product products__item">
+                        <img src="./assets/img/Large.png" alt="Диван" class="product__image">
+                        <div class="product__content">
+                            <h3 class="product__title">Диван</h3>
+                            <p class="product__price">25 000 ₽</p>
+                            <button class="button button--product">В корзину</button>
+                        </div>
+                    </div>
+                    
+                    <div class="product products__item">
+                        <img src="./assets/img/Photo (2).png" alt="Лампа с голубой стеной" class="product__image">
+                        <div class="product__content">
+                            <h3 class="product__title">Лампа с голубой стеной</h3>
+                            <p class="product__price">40 000 ₽</p>
+                            <button class="button button--product">В корзину</button>
+                        </div>
+                    </div>
+                    
+                    <div class="product products__item">
+                        <img src="./assets/img/Photo (3).png" alt="Ч/б стул" class="product__image">
+                        <div class="product__content">
+                            <h3 class="product__title">Ч/б стул</h3>
+                            <p class="product__price">10 000 ₽</p>
+                            <button class="button button--product">В корзину</button>
+                        </div>
+                    </div>
+                </div>
+                <button class="button button--primary selection__button">Посмотреть больше</button>
+            </div>
         </section>
-        <section>
-            <h2>История компании</h2>
-            <p>Внезапно, активно развивающиеся страны третьего мира освещают чрезвычайно интересные особенности картины в&nbsp;целом,
-                однако конкретные выводы, разумеется, призваны к&nbsp;ответу. С&nbsp;учётом сложившейся международной обстановки, 
-                семантический разбор внешних противодействий обеспечивает широкому кругу (специалистов) участие в&nbsp;формировании приоретизации разума над эмоциями.
 
-            И&nbsp;нет сомнений, что диаграммы связей неоднозначны и&nbsp;будут объективно рассмотрены соответствующими инстанциями. 
-            Значимость этих проблем настолько очевидна, что сложившаяся структура организации играет определяющее значение для вывода текущих активов. 
-            Противоположная точка зрения подразумевает, что элементы политического процесса разоблачены. В&nbsp;частности, дальнейшее развитие различных 
-            форм деятельности играет важную роль в&nbsp;формировании укрепления моральных ценностей.
-            Предварительные выводы неутешительны: существующая теория не&nbsp;даёт нам иного выбора, кроме определения приоретизации разума над эмоциями.
-            </p>
+        <section id="join" class="section join section--secondary">
+            <div class="container">
+                <h2 class="section__title join__title">Присоединяйся к нам</h2>
+                <div class="join__content">
+                    <p class="join__text">Следует отметить, что граница обучения кадров предоставляет широкие возможности для вывода текущих активов. Сложно сказать, почему сделанные на&nbsp;базе интернет-аналитики выводы представляют собой не&nbsp;что иное, как квинтэссенцию победы маркетинга над разумом и&nbsp;должны быть объявлены нарушающими общечеловеческие нормы этики и&nbsp;морали.
+                    В&nbsp;своём стремлении улучшить пользовательский опыт мы&nbsp;упускаем, что непосредственные участники технического прогресса, вне зависимости от&nbsp;их&nbsp;уровня, должны быть разоблачены. С&nbsp;другой стороны, внедрение современных методик требует от&nbsp;нас анализа новых принципов формирования материально-технической и&nbsp;кадровой базы.</p>
+                </div>
+                <button class="button button--secondary join__button">Присоединиться</button>
+            </div>
+        </section>
+
+        <section id="about" class="section about">
+            <div class="container">
+                <h2 class="section__title about__title">История компании</h2>
+                <div class="about__content">
+                    <p class="about__text">Внезапно, активно развивающиеся страны третьего мира освещают чрезвычайно интересные особенности картины в&nbsp;целом, однако конкретные выводы, разумеется, призваны к&nbsp;ответу. С&nbsp;учётом сложившейся международной обстановки, семантический разбор внешних противодействий обеспечивает широкому кругу (специалистов) участие в&nbsp;формировании приоретизации разума над эмоциями.
+                    И&nbsp;нет сомнений, что диаграммы связей неоднозначны и&nbsp;будут объективно рассмотрены соответствующими инстанциями. Значимость этих проблем настолько очевидна, что сложившаяся структура организации играет определяющее значение для вывода текущих активов.</p>
+                </div>
+            </div>
         </section>
     </main>
-    <footer>
-        <table>
-            <tr>
-                <th>Опции</th>
-                <th>Категории</th>
-                <th>Моя компания</th>
-                <th>Включить рассылку</th>
-            </tr>
-            <tr>
-                <td>Меню</td>
-                <td>Категории</td>
-                <td>О компании</td>
-                <td rowspan="5">
-                    <input type="email" placeholder="Мега@мейл.ру">
-                    <button>Войти</button>
-                </td>
-            </tr>
-            <tr>
-                <td>Кладбище самолетов</td>
-                <td>Кладбище самолётов, я никогда не стану</td>
-                <td>Частью больших историй, и пусть…</td>
-            </tr>
-            <tr>
-                <td>Солнце утонет в море, где-то там за домами</td>
-                <td>Я непременно вскоре проснусь</td>
-                <td>Прости мне мои расспросы, но это невыносимо</td>
-            </tr>
-            <tr>
-                <td>Так быстро проходит осень, так тянутся долго зимы</td>
-                <td>Съедают мои детали ветер и снег, давай</td>
-                <td>Куда бы мы не летали</td>
-            </tr>
-            <tr>
-                <td>Вспоминай</td>
-                <td>Вспоминай</td>
-                <td>Вспоминай</td>
-            </tr>
-        </table>
 
+    <footer class="footer">
         <div class="container">
-            <div class="social-icons">
-                <img src="./assets/icons/Logo--linkedin.png" alt="LinkedIn" class="icon">
-                <img src="./assets/icons/Logo--pinterest.png" alt="Pinterest" class="icon">
-                <img src="./assets/icons/Logo--skype.png" alt="Skype" class="icon">
+            <div class="footer__grid">
+                <div class="footer__column">
+                    <h3 class="footer__title">Опции</h3>
+                    <ul class="footer__list">
+                        <li class="footer__item"><a href="#" class="footer__link">Меню</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Кладбище самолетов</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Солнце утонет в море</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Так быстро проходит осень</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Вспоминай</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__column">
+                    <h3 class="footer__title">Категории</h3>
+                    <ul class="footer__list">
+                        <li class="footer__item"><a href="#" class="footer__link">Категории</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Кладбище самолётов</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Я непременно вскоре проснусь</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Съедают мои детали</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Вспоминай</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__column">
+                    <h3 class="footer__title">Моя компания</h3>
+                    <ul class="footer__list">
+                        <li class="footer__item"><a href="#" class="footer__link">О компании</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Частью больших историй</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Прости мне мои расспросы</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Куда бы мы не летали</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Вспоминай</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__column footer__column--wide">
+                    <h3 class="footer__title">Включить рассылку</h3>
+                    <div class="footer__newsletter">
+                        <p class="footer__text">Подпишитесь на наши новости и акции</p>
+                        <div class="footer__form">
+                            <input type="email" placeholder="Мега@мейл.ру" class="footer__input">
+                            <button class="button footer__button">Войти</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <p>&copy; 2005 - 2025 MEGA SITE. Все права защищены.</p>
+            
+            <div class="footer__bottom">
+                <div class="footer__social">
+                    <a href="#" class="footer__social-link">
+                        <img src="./assets/icons/Logo--linkedin.png" alt="LinkedIn" class="footer__social-icon">
+                    </a>
+                    <a href="#" class="footer__social-link">
+                        <img src="./assets/icons/Logo--pinterest.png" alt="Pinterest" class="footer__social-icon">
+                    </a>
+                    <a href="#" class="footer__social-link">
+                        <img src="./assets/icons/Logo--skype.png" alt="Skype" class="footer__social-icon">
+                    </a>
+                </div>
+                <p class="footer__copyright">&copy; 2005 - 2025 MEGA SITE. Все права защищены.</p>
+            </div>
         </div>
     </footer>
 </body>
-
 </html>
