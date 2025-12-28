@@ -668,7 +668,7 @@ button {
     }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 575px) {
     .footer__grid {
         grid-template-columns: 1fr;
     }
